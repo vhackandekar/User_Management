@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheet/user.css">
+    <title>Users</title>
+</head>
+<body>
+    <div class="container">
+        <% users.forEach(user => { %>
+            <div class="user-card">
+                <img src="<%= user.url %>" alt="">
+                <div>
+                    <h2><%= user.name %></h2>
+                    <p><%= user.email %></p>
+                    <div class="user-actions">
+                        <div>
+                          <a href="/users/<%= user._id %>/delete">Delete User</a>
+                        </div>
+                        <div>
+                          <a href="/users/<%= user._id %>/edit">Edit User</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>

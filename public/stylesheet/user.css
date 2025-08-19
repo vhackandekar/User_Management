@@ -1,0 +1,150 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f0f0f, #1d1d1d, #222831);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: #fff;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* User Card */
+.user-card {
+    background: #1e1e1e;
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    border: 1px solid #2a2a2a;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    min-width: 0;
+    word-break: break-word;
+}
+
+.user-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 173, 181, 0.4);
+}
+
+/* Profile Image */
+.user-card img {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    border: 3px solid #00adb5;
+    object-fit: cover;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.55);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.user-card img:hover {
+    transform: scale(1.08);
+    border-color: #02c3cb;
+}
+
+/* User Info */
+.user-card h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fdfdfd;
+    margin-bottom: 0.5rem;
+}
+
+.user-card p {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* Actions */
+.user-actions {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-top: 0.8rem;
+}
+
+.user-actions a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+     display: flex;
+  gap: 12px; 
+    
+}
+
+/* Edit button */
+.user-actions a[href*="edit"] {
+    background: #0077ff;
+    box-shadow: 0 3px 10px rgba(0, 119, 255, 0.4);
+    
+}
+
+.user-actions a[href*="edit"]:hover {
+    background: #3399ff;
+    box-shadow: 0 4px 14px rgba(0, 119, 255, 0.6);
+}
+
+/* Delete button */
+.user-actions a[href*="delete"] {
+    background: #ff4c4c;
+    box-shadow: 0 3px 10px rgba(255, 76, 76, 0.4);
+}
+
+.user-actions a[href*="delete"]:hover {
+    background: #ff6666;
+    box-shadow: 0 4px 14px rgba(255, 76, 76, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .user-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.8rem;
+    }
+
+    .user-card img {
+        margin-bottom: 1rem;
+    }
+
+    .user-actions {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .user-actions a {
+        width: 100%;
+        text-align: center;
+    }
+}

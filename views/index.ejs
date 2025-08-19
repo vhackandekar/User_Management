@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create user</title>
+    <link rel="stylesheet" href="/stylesheet/style.css">
+    <script defer src="/javascript/form-interactive.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>create User</h1>
+        </div>
+        <div class="form">
+            <form action="/" method="post" autocomplete="off">
+                <input type="text" placeholder="Name" name="name" required>
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="text" placeholder="Image URL" name="url" required>
+                <div class="preview-img-wrapper">
+                    <!-- Image preview will be injected by JS -->
+                </div>
+                <input type="submit" value="Submit">
+                <a href="/users">View Users</a>
+            </form>
+           
+        </div>
+    </div>
+      
+
+</body>
+</html>
